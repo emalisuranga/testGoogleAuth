@@ -11,20 +11,20 @@ const handleSignOut = async () => {
   }
 };
 
-onMounted(async () => {
-  try {
-    // Check if the user is authenticated
-    const currentUser = await getCurrentUser()
-    console.log(currentUser);
-    if (currentUser) {
-      localStorage.setItem('accessToken', currentUser.userId)
-    } else {
-    //   router.push('/login')
-    }
-  } catch (error) {
-    console.error('Error getting current user:', error)
-  }
-})
+// onMounted(async () => {
+//   try {
+//     // Check if the user is authenticated
+//     const currentUser = await getCurrentUser()
+//     console.log(currentUser);
+//     if (currentUser) {
+//       localStorage.setItem('accessToken', currentUser.userId)
+//     } else {
+//     //   router.push('/login')
+//     }
+//   } catch (error) {
+//     console.error('Error getting current user:', error)
+//   }
+// })
 </script>
 
 <template>
