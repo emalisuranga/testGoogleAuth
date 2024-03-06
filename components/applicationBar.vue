@@ -24,7 +24,6 @@ const router = useRouter()
 const handleSignOut = async () => {
   try {
     await signOut({ global: true });
-    router.push('/login')
   } catch (error) {
     console.log("error signing out: ", error);
   }
