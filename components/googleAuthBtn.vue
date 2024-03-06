@@ -62,7 +62,6 @@
 <script setup>
 import { Hub } from "aws-amplify/utils";
 import { signInWithRedirect, getCurrentUser } from "aws-amplify/auth";
-import { signOut } from "aws-amplify/auth";
 
 const handleSignInClick = async () => {
   try {
