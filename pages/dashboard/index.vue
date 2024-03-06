@@ -1,10 +1,16 @@
 <script setup>
-//   import { Authenticator } from "@aws-amplify/ui-vue";
-//   import "@aws-amplify/ui-vue/styles.css";
+import { signOut } from "aws-amplify/auth";
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
-//   import { Amplify } from 'aws-amplify';
-//   import config from './amplifyconfiguration.json';
-//   Amplify.configure(config);
+const handleSignOut = async () => {
+  try {
+    await signOut({ global: true });
+    router.push('/login')
+  } catch (error) {
+    console.log("error signing out: ", error);
+  }
+};
 </script>
 
 <template>
@@ -15,4 +21,8 @@
     </template>
   </authenticator> -->
   <h1>dashboard</h1>
+  <button
+  @click="handleSignOut"
+            class="inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white dark:bg-gray-700 px-4 py-2 text-sm font-medium text-gray-500 dark:text-white shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600 disabled:cursor-wait disabled:opacity-50"
+          >Sing Out</button>
 </template>
