@@ -2,4 +2,4 @@
     <login>
       <google-auth-btn />
     </login>
-  </template>
+</template>
