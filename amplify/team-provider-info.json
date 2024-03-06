@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-samplenuxtgoogleauth-dev-203927-authRole",
+      "UnauthRoleArn": "arn:aws:iam::042207687108:role/amplify-samplenuxtgoogleauth-dev-203927-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::042207687108:role/amplify-samplenuxtgoogleauth-dev-203927-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-samplenuxtgoogleauth-dev-203927-deployment",
+      "UnauthRoleName": "amplify-samplenuxtgoogleauth-dev-203927-unauthRole",
+      "StackName": "amplify-samplenuxtgoogleauth-dev-203927",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:042207687108:stack/amplify-samplenuxtgoogleauth-dev-203927/dcbc6390-da1b-11ee-8019-0670823a15cb",
+      "AmplifyAppId": "d399pruu52djtw"
+    },
+    "categories": {
+      "auth": {
+        "samplenuxtgoogleauth72f234c5": {}
+      }
+    }
+  }
+}
