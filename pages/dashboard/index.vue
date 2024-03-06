@@ -28,7 +28,7 @@ const handleSignOut = async () => {
 
 <template>
   <h1>dashboard</h1>
-  <button @click="handleSignOut" class="inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white dark:bg-gray-700 px-4 py-2 text-sm font-medium text-gray-500 dark:text-white shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600 disabled:cursor-wait disabled:opacity-50">Sing Out</button>
+  <button @click="signOut" class="inline-flex w-full items-center justify-center rounded-md border border-gray-300 bg-white dark:bg-gray-700 px-4 py-2 text-sm font-medium text-gray-500 dark:text-white shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600 disabled:cursor-wait disabled:opacity-50">Sing Out</button>
 </template>
 
 <!-- <template>
