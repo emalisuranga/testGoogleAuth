@@ -1,6 +1,6 @@
 <script setup>
 import { signOut } from "aws-amplify/auth";
-// import { getCurrentUser } from "aws-amplify/auth";
+import { getCurrentUser } from "aws-amplify/auth";
 
 const handleSignOut = async () => {
   try {
