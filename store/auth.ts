@@ -1,11 +1,6 @@
 import { defineStore } from 'pinia';
 import { getCurrentUser } from "aws-amplify/auth";
 
-interface UserPayloadInterface {
-    username: string;
-    password: string;
-}
-
 export const useAuthStore = defineStore('auth', {
     state: () => ({
         authenticated: false,

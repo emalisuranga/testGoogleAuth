@@ -37,7 +37,7 @@
               </g>
             </svg>
           </button>
-          <v-btn icon="mdi-logout" @click="handleSignOut"></v-btn>
+          <!-- <v-btn icon="mdi-logout" @click="handleSignOut"></v-btn> -->
         </div>
 </template>
 
@@ -53,11 +53,11 @@ const handleSignInClick = async () => {
   }
 };
 
-const handleSignOut = async () => {
-  try {
-    await signOut({ global: true });
-  } catch (error) {
-    console.log("error signing out: ", error);
-  }
-};
+// const handleSignOut = async () => {
+//   try {
+//     await signOut({ global: true });
+//   } catch (error) {
+//     console.log("error signing out: ", error);
+//   }
+// };
 </script>

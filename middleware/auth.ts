@@ -1,14 +1,16 @@
 import { getCurrentUser } from "aws-amplify/auth";
+import { storeToRefs } from 'pinia';
+import { useAuthStore } from '~/store/auth';
 
 export default defineNuxtRouteMiddleware(async (to, from) => {
+  const router = useRouter();
+  const { authenticateUser } = useAuthStore();
+    const { authenticated } = storeToRefs(useAuthStore());
   try {
     console.log('From auth middleware')
-    // Check if the user is authenticated
-    const currentUser = await getCurrentUser()
-    console.log(currentUser)
-    if (!currentUser) {
-      // User is not authenticated, redirect to the login page
-      return navigateTo('/login')
+    await authenticateUser()
+    if (!authenticated) {
+      router.push('/');
     }
   } catch (error) {
     console.error('Error getting current user:', error)
