@@ -9,20 +9,8 @@ const handleSignOut = async () => {
     console.log("error signing out: ", error);
   }
 };
-
-onMounted(async () => {
-  try {
-    // Check if the user is authenticated
-    const currentUser = await getCurrentUser()
-    console.log(currentUser);
-    if (currentUser) {
-      localStorage.setItem('accessToken', currentUser.userId)
-    } else {
-    //   router.push('/login')
-    }
-  } catch (error) {
-    console.error('Error getting current user:', error)
-  }
+definePageMeta({
+    middleware: 'auth' // this should match the name of the file inside the middleware directory 
 })
 </script>
 
