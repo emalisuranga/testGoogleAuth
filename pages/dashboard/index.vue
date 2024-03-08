@@ -1,10 +1,14 @@
 <script setup>
 import { signOut } from "aws-amplify/auth";
-import { getCurrentUser } from "aws-amplify/auth";
+import { storeToRefs } from 'pinia'; 
+import { useAuthStore } from '~/store/auth'; 
+
+const { logUserOut } = useAuthStore();
 
 const handleSignOut = async () => {
   try {
     await signOut({ global: true });
+    logUserOut();
   } catch (error) {
     console.log("error signing out: ", error);
   }
