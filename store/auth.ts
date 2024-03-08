@@ -14,15 +14,15 @@ export const useAuthStore = defineStore('auth', {
             // this.loading = pending;
 
             if (currentUser) {
-                const token = useCookie('token'); // useCookie new hook in nuxt 3
-                token.value = currentUser.username; // set token to cookie
-                this.authenticated = true; // set authenticated  state value to true
+                const token = useCookie('token'); 
+                token.value = currentUser.username; 
+                this.authenticated = true; 
             }
         },
         logUserOut() {
-            const token = useCookie('token'); // useCookie new hook in nuxt 3
-            this.authenticated = false; // set authenticated  state value to false
-            token.value = null; // clear the token cookie
+            const token = useCookie('token'); 
+            this.authenticated = false; 
+            token.value = null; 
         },
     },
 });
